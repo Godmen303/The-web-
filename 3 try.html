@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscriptions et Dons</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #3c763d;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #3c763d;
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            margin-top: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        button {
+            background-color: #3c763d;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #2e5f2b;
+        }
+    </style>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert("Merci pour votre inscription !");
+            window.location.href = "4 test.html"; // Change this to your main page's URL if different
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Inscriptions et Dons</h1>
+    </header>
+    <div class="container">
+        <h2>Inscrivez-vous pour participer</h2>
+        <form onsubmit="handleSubmit(event)">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="activity">Activité</label>
+            <select id="activity" name="activity">
+                <option value="ateliers">Ateliers éducatifs</option>
+                <option value="reforestation">Projets de reforestation</option>
+                <option value="jardins">Jardins communautaires</option>
+            </select>
+
+            <button type="submit">S'inscrire</button>
+        </form>
+
+        <h2>Faire un don</h2>
+        <form onsubmit="handleSubmit(event)">
+            <label for="donation-amount">Montant du don</label>
+            <input type="number" id="donation-amount" name="donation-amount" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit">Faire un don</button>
+        </form>
+    </div>
+</body>
+</html>
