@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page de Mot de Passe</title>
+    <title>Escape Room</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -43,7 +43,7 @@
 </head>
 <body>
     <div class="container">
-        <h2>Entrer le Mot de Passe</h2>
+        <h2>Entrez le Mot de Passe pour Déverrouiller l'Ordinateur</h2>
         <input type="password" id="password" placeholder="Mot de Passe">
         <button onclick="verifyPassword()">Soumettre</button>
     </div>
@@ -51,10 +51,11 @@
     <script>
         function verifyPassword() {
             var password = document.getElementById("password").value;
-            
+
             if (password === "chalatoo") {
-                alert("Mot de passe correct ! Vous pouvez entrer.");
-                //Redirect or perform actions
+                alert("Mot de passe correct ! Accédez aux énigmes supplémentaires.");
+                // Rediriger vers le fichier des énigmes supplémentaires
+                window.location.href = "enigmes_supplementaires.txt";
             } else {
                 alert("Mot de passe incorrect. Veuillez réessayer.");
             }
