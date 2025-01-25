@@ -3,21 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Découvrez le plan d'action climatique à Saskatoon et nos initiatives pour un avenir durable.">
-    <title>Plan d'action climatique à Saskatoon</title>
-    <link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
+    <title>Page de Mot de Passe</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
         }
-        header {
-            background-color: #3c763d;
-            color: white;
+        .container {
             text-align: center;
-            padding: 20px 0;
-            box-shadow: 0 2
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        input[type="password"] {
+            width: 200px;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Entrer le Mot de Passe</h2>
+        <input type="password" id="password" placeholder="Mot de Passe">
+        <button onclick="verifyPassword()">Soumettre</button>
+    </div>
+
+    <script>
+        function verifyPassword() {
+            var password = document.getElementById("password").value;
+            
+            if (password === "chalatoo") {
+                alert("Mot de passe correct ! Vous pouvez entrer.");
+                //Redirect or perform actions
+            } else {
+                alert("Mot de passe incorrect. Veuillez réessayer.");
+            }
+        }
+    </script>
+</body>
+</html>
