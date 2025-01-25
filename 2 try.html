@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escape Room</title>
+    <title>Énigmes Supplémentaires</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -20,46 +20,20 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
-        input[type="password"] {
-            width: 200px;
-            padding: 10px;
-            margin-top: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        button {
-            margin-top: 15px;
-            padding: 10px 20px;
-            border: none;
-            background-color: #4CAF50;
-            color: white;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
+        ul {
+            text-align: left;
+            padding-left: 0;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Entrez le Mot de Passe pour Déverrouiller l'Ordinateur</h2>
-        <input type="password" id="password" placeholder="Mot de Passe">
-        <button onclick="verifyPassword()">Soumettre</button>
+        <h2>Énigmes Supplémentaires</h2>
+        <ul>
+            <li>Énigme 1 : Devinez la suite de cette séquence : 2, 6, 12, 20, __ ? Réponse : 30 (ajoutant des carrés consécutifs)</li>
+            <li>Énigme 2 : Si S = 19 & U = 21 & N = 14, que vaut M, I, E ? Réponse : M = 13, I = 9, E = 5 (complètant les lettres de l'alphabet)</li>
+            <li>Énigme 3 : De deux mis en miroir, il devient identifier N si tu renies. Réponse : S + N = 14 (joint ensemble sous l’optique binaire).</li>
+        </ul>
     </div>
-
-    <script>
-        function verifyPassword() {
-            var password = document.getElementById("password").value;
-
-            if (password === "chalatoo") {
-                alert("Mot de passe correct ! Accédez aux énigmes supplémentaires.");
-                // Rediriger vers le fichier des énigmes supplémentaires
-                window.location.href = "enigmes_supplementaires.txt";
-            } else {
-                alert("Mot de passe incorrect. Veuillez réessayer.");
-            }
-        }
-    </script>
 </body>
 </html>
